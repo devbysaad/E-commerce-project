@@ -1,0 +1,54 @@
+{
+  "product": [
+    {
+      "id": "ZQnW1MVsfyN0o9d5xV4ga",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9Fk5BdqEyOvJF-M1OY3FLRZoLVmEeUCcp5PTQbRZUksfL9DsOUTxXUozfmyrxdeMJZg&usqp=CAU",
+      "title": "Pixel 10 Pro",
+      "description": "Basic specification is RAM: 16GB, Storage: 256 GB, Camera: 50 MP, f/1.7, 25mm (wide), 48 MP, f/2.8, 113mm (periscope telephoto), 48 MP, f/1.7, 123˚ (ultrawide), Battery: 5200 mAh, Screen: 6.8 inches, 5G Support, Finger Print,.",
+      "category": "Non PTA",
+      "price": "389999"
+    },
+    {
+      "id": "72-iih_YvlTDvHQpuF4EJ",
+      "image": "https://www.mega.pk/items_images/Google+Pixel+10+Pro+XL+256GB+Storage+Non+PTA+Price+in+Pakistan%2C+Specifications%2C+Features_-_26767.webp",
+      "title": "IPhone XS",
+      "description": "Basic specification is RAM: 16GB, Storage: 256 GB, Camera: 50 MP, f/1.7, 25mm (wide), 48 MP, f/2.8, 113mm (periscope telephoto), 48 MP, f/1.7, 123˚ (ultrawide), Battery: 5200 mAh, Screen: 6.8 inches, 5G Support, Finger Print,.",
+      "category": "Non PTA",
+      "price": "540000"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "email": "john@mail.com",
+      "password": "123456",
+      "username": "saad",
+      "isAdmin": true,
+      "role": "",
+      "cart": []
+    },
+    {
+      "id": "bHAF0uLlS_85olJrAzop8",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCgrMDLxvyxvHMGY2_XiBgrs6EpVZQScEgdg&s",
+      "username": "hamza",
+      "email": "hamza@ai.com",
+      "password": "123",
+      "role": "admin",
+      "isAdmin": true,
+      "cart": [
+        {
+          "product": {
+            "id": "ZQnW1MVsfyN0o9d5xV4ga",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9Fk5BdqEyOvJF-M1OY3FLRZoLVmEeUCcp5PTQbRZUksfL9DsOUTxXUozfmyrxdeMJZg&usqp=CAU",
+            "title": "Pixel 10 Pro",
+            "description": "Basic specification is RAM: 16GB, Storage: 256 GB, Camera: 50 MP, f/1.7, 25mm (wide), 48 MP, f/2.8, 113mm (periscope telephoto), 48 MP, f/1.7, 123˚ (ultrawide), Battery: 5200 mAh, Screen: 6.8 inches, 5G Support, Finger Print,.",
+            "category": "Non PTA",
+            "price": "389999"
+          },
+          "quantity": 3
+        }
+      ]
+    }
+  ]
+}
