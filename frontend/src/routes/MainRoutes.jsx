@@ -1,28 +1,29 @@
+import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom' // ✅ correct import
-import Home from '../pages/Home'
-import Cart from '../pages/Cart'
-import Login from '../pages/Login'
-import Products from '../pages/Products'
-import Register from '../pages/Register'
-import CreateProuct from '../pages/admin/CreateProuct'
-import SingleProduct from '../pages/SingleProduct';
-import ProfileUser from '../pages/user/ProfileUser'
-import PageNotFound from '../pages/PageNotFound'
-import AuthWrapper from '../pages/AuthWrapper';
+import UnauthWrapper from './UnauthWrapper'
+
+const Cart = lazy(() => import('../pages/Cart'))
+const Login = lazy(() => import('../pages/Login'))
+const Products = lazy(() => import('../pages/Products'))
+const Register = lazy(() => import('../pages/Register'))
+const SingleProduct = lazy(() => import('../pages/SingleProduct'))
+const ProfileUser = lazy(() => import('../pages/user/ProfileUser'))
+const PageNotFound = lazy(() => import('../pages/PageNotFound'))
+const CreateProduct = lazy(() => import('../pages/admin/CreateProuct'))
+const AuthWrapper = lazy(() => import('./AuthWrapper'))
 
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Products />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+      <Route path="/" element={<AuthWrapper><Products /></AuthWrapper>} />
+      <Route path="/login" element={<UnauthWrapper><Login /></UnauthWrapper>} />
+      <Route path="/register" element={<UnauthWrapper><Register /></UnauthWrapper>} />
       <Route
-        path="/userProfile" element={<ProfileUser />}
+        path="/userProfile" element={<AuthWrapper><ProfileUser /></AuthWrapper>}
       />
-      <Route path="/createProduct"element={<CreateProuct />} />
-      <Route path="/singleProduct/:id" element={<SingleProduct />} />
-      <Route path="/cart" element={<Cart />} />
-
+      <Route path="/createProduct" element={<CreateProduct />} />
+      <Route path="/singleProduct/:id" element={<AuthWrapper><SingleProduct /></AuthWrapper>} />
+      <Route path="/cart" element={<AuthWrapper><Cart /></AuthWrapper>} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
 

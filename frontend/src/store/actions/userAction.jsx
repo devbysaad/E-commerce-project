@@ -28,8 +28,8 @@ export const logoutUser = () => async (dispatch, getState) => {
 export const getLoginUser = (user) => async (dispatch, getState) => {
     try {
         const { data } = await axios.get(`/user?email=${user.email}&password=${user.password}`)
-        console.log(data[0]);
         localStorage.setItem("user", JSON.stringify(data[0]));
+        dispatch(getCurrentUser())
     } catch (error) {
         console.log(error);
 
@@ -40,11 +40,7 @@ export const getLoginUser = (user) => async (dispatch, getState) => {
 export const updateUser = (id, user) => async (dispatch) => {
   try {
     const { data } = await axios.patch('/user/' + id, user);
-
-    // directly update redux state
     dispatch(loaduser(data));
-
-    // update localStorage
     localStorage.setItem("user", JSON.stringify(data));
   } catch (error) {
     console.log(error);
