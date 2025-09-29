@@ -17,6 +17,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-950 px-4">
+      <h1 className=' text-white'>{import.meta.env.VITE_APP_ECOMMER}</h1>
       <form 
         onSubmit={handleSubmit(LoginHandler)} 
         className="bg-gray-900 shadow-2xl rounded-2xl p-8 w-full max-w-md flex flex-col items-center gap-6"

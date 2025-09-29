@@ -10,15 +10,6 @@
       "rating": {}
     },
     {
-      "id": "2",
-      "title": "Mens Casual Premium Slim Fit T-Shirts ",
-      "price": "452345",
-      "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-      "category": "men's clothing",
-      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-      "rating": {}
-    },
-    {
       "id": "3",
       "title": "Mens Cotton Jacket",
       "price": 55.99,
@@ -195,6 +186,14 @@
       "description": "Basic specification is RAM: 16GB, Storage: 256 GB, Camera: 50 MP, f/1.7, 25mm (wide), 48 MP, f/2.8, 113mm (periscope telephoto), 48 MP, f/1.7, 123˚ (ultrawide), Battery: 5200 mAh, Screen: 6.8 inches, 5G Support, Finger Print,.",
       "category": "Non PTA",
       "price": "123"
+    },
+    {
+      "id": "W9P7QmKmvz-oBroOkohuy",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9Fk5BdqEyOvJF-M1OY3FLRZoLVmEeUCcp5PTQbRZUksfL9DsOUTxXUozfmyrxdeMJZg&usqp=CAU",
+      "title": "Google Pixel 8",
+      "description": "Basic specification is RAM: 16GB, Storage: 256 GB, Camera: 50 MP, f/1.7, 25mm (wide), 48 MP, f/2.8, 113mm (periscope telephoto), 48 MP, f/1.7, 123˚ (ultrawide), Battery: 5200 mAh, Screen: 6.8 inches, 5G Support, Finger Print,.",
+      "category": "Non PTA",
+      "price": "56600"
     }
   ],
   "user": [
@@ -298,6 +297,29 @@
       "role": "admin",
       "cart": [],
       "isAdmin": true
+    },
+    {
+      "id": "BqSa2N3SRyL7TKsvQSe0s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9Fk5BdqEyOvJF-M1OY3FLRZoLVmEeUCcp5PTQbRZUksfL9DsOUTxXUozfmyrxdeMJZg&usqp=CAU",
+      "username": "dev by saad",
+      "email": "devbysaad@gmail.com",
+      "password": "12345",
+      "role": "customer",
+      "cart": [
+        {
+          "product": {
+            "id": "11",
+            "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+            "price": 109,
+            "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+            "category": "electronics",
+            "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
+            "rating": {}
+          },
+          "quantity": 6
+        }
+      ],
+      "isAdmin": false
     }
   ]
 }

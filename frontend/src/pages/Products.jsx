@@ -1,39 +1,11 @@
-
-import { Suspense, useState, useEffect, lazy } from "react";
-import axios from "../api/config";
+import { Suspense, useState,  lazy } from "react"
 import InfiniteScroll from "react-infinite-scroll-component";
-import { loadLazyProduct } from "../store/reducers/productSlice";
-import { useDispatch, useSelector } from "react-redux";
+import useFetchProduct from "../utlis/useFetchProduct";
 const ProductTemp =lazy(() => import('./ProductTemp')) 
 
 const Products = () => {
-  const productData = useSelector((state) => state.product.productData);
-  const dispatch = useDispatch();
-  const [hasMore, setHasMore] = useState(true);
+  const {hasMore, productData, fetchProduct} = useFetchProduct()
   const [searchTerm, setSearchTerm] = useState("");
-  
-  const fetchProduct = async () => {
-    try {
-      const { data } = await axios.get(
-        `/product?_limit=8&_start=${productData.length}`
-      );
-
-      if (data.length === 0) {
-        setHasMore(false);
-      } else {
-        dispatch(loadLazyProduct(data))
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchProduct();
-  }, []);
-
-
-
   const filteredProducts = productData.filter((product) =>
     product.title?.toLowerCase().includes(searchTerm.toLowerCase())
   );
