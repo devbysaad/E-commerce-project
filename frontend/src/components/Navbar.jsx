@@ -15,7 +15,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="flex justify-between items-center px-10 py-4 bg-gray-900 shadow-lg border-b border-gray-800">
+    <nav className="flex justify-between items-center fixed w-screen z-20 px-10 py-4 bg-gray-900 shadow-lg border-b border-gray-800">
       <div className="flex gap-8 text-lg font-medium">
         <NavLink
           className={(e) =>

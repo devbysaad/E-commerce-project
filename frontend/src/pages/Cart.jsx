@@ -46,7 +46,7 @@ const Cart = () => {
     return (
       <li
         key={product.id}
-        className="flex justify-between flex-row items-center gap-4 p-2 border-b border-gray-700"
+        className="flex justify-between flex-row items-center gap-14 p-2 border-b border-gray-700"
       >
         <div className='flex flex-row'>
            <Link to={`/singleProduct/${product}`} className="block">
@@ -82,7 +82,7 @@ const Cart = () => {
   });
 
   return (
-    <div className="max-w-2xl mt-15 m-5 mx-auto p-6 bg-gray-900 rounded-xl shadow-lg">
+    <div className="max-w-2xl mt-[150px]  m-5 mx-auto p-6 bg-gray-900 rounded-xl shadow-lg">
       <h2 className="text-xl font-bold text-white mb-4">Your Cart</h2>
       <ul className="divide-y  divide-gray-800">{renderCart}</ul>
     </div>
