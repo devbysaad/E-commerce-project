@@ -27,7 +27,7 @@ export const logoutUser = () => async (dispatch, getState) => {
 }
 export const getLoginUser = (user) => async (dispatch, getState) => {
     try {
-        const { data } = await axios.get(`/user?email=${user.email}&password=${user.password}`)
+        const { data } = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND}/user?email=${user.email}&password=${user.password}`)
         localStorage.setItem("user", JSON.stringify(data[0]));
         dispatch(getCurrentUser())
     } catch (error) {
@@ -39,7 +39,7 @@ export const getLoginUser = (user) => async (dispatch, getState) => {
 
 export const updateUser = (id, user) => async (dispatch) => {
   try {
-    const { data } = await axios.patch('/user/' + id, user);
+    const { data } = await axios.patch(`${import.meta.env.VITE_REACT_APP_BACKEND}/user` + id, user);
     dispatch(loaduser(data));
     localStorage.setItem("user", JSON.stringify(data));
   } catch (error) {
@@ -52,7 +52,7 @@ export const updateUser = (id, user) => async (dispatch) => {
 export const getRegisterUser = (user) => async (dispatch, getState) => {
     try {
         console.log(getState());
-        const res = await axios.post('/user', user)
+        const res = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND}/user`, user)
         console.log(res);
 
     } catch (error) {
